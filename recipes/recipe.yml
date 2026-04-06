@@ -1,7 +1,7 @@
 name: cloche-enterprise
 description: #
 base-image: quay.io/almalinuxorg/almalinux-bootc
-image-version: 10
+image-version: latest
 
 #modules:
 #  - type: shell
