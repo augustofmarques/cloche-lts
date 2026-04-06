@@ -1,6 +1,6 @@
 name: cloche-enterprise
 description: "CentOS Stream 10 Enterprise Base"
-base-image: quay.io/almalinuxorg/almalinux-bootc:10.1
+base-image: quay.io/almalinuxorg/almalinux-bootc
 image-version: latest
 #quay.io/centos-bootc/centos-bootc
 modules:
