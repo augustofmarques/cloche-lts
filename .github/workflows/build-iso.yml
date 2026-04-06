@@ -5,7 +5,7 @@ jobs:
   generate-iso:
     runs-on: ubuntu-latest
     steps:
-      - name: Prepara o diretório
+      - name: Prepares directory
         run: mkdir -p ./output
 
       - name: Pull OCI image
