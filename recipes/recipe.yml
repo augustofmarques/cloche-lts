@@ -1,13 +1,12 @@
 name: cloche-enterprise
-description: #
+description: ---
 base-image: quay.io/almalinuxorg/almalinux-bootc
 image-version: latest
 
 modules:
-  - type: shell
-    commands:
-      - dnf install -y epel-release
-      - dnf config-manager --set-enabled crb
+  - type: containerfile
+    snippets:
+      - RUN dnf install -y epel-release && dnf config-manager --set-enabled crb
 
 #  - type: dnf
 #    install:
