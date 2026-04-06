@@ -3,20 +3,20 @@ description: #
 base-image: quay.io/almalinuxorg/almalinux-bootc
 image-version: 10
 
-modules:
-  - type: shell
-    commands:
+#modules:
+#  - type: shell
+#    commands:
       #- dnf install -y epel-release
       #- dnf config-manager --set-enabled crb
 
-  - type: dnf
-    install:
-      packages:
+#  - type: dnf
+#    install:
+#      packages:
         #- "@Workstation"
         #- gdm
 
-  - type: systemd
-    system:
-      enabled:
+  #- type: systemd
+    #system:
+      #enabled:
         #- gdm.service
         #- NetworkManager.service
