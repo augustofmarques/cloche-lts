@@ -3,11 +3,11 @@ description: #
 base-image: quay.io/almalinuxorg/almalinux-bootc
 image-version: latest
 
-#modules:
-#  - type: shell
-#    commands:
-      #- dnf install -y epel-release
-      #- dnf config-manager --set-enabled crb
+modules:
+  - type: shell
+    commands:
+      - dnf install -y epel-release
+      - dnf config-manager --set-enabled crb
 
 #  - type: dnf
 #    install:
