@@ -8,17 +8,6 @@ modules:
     snippets:
       - RUN dnf install -y epel-release && dnf config-manager --set-enabled crb
 
-      # 
-      - RUN echo "9" > /etc/dnf/vars/releasever
-      
-      # 
-      - RUN sed -i 's/$releasever/9/g' /etc/yum.repos.d/*.repo
-      
-      # 
-      - RUN dnf install -y epel-release && dnf config-manager --set-enabled crb
-      
-      # 
-      - RUN sed -i 's/$releasever/9/g' /etc/yum.repos.d/epel*.repo
 #  - type: dnf
 #    install:
 #      packages:
