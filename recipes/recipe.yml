@@ -1,7 +1,7 @@
 name: cloche-enterprise
 description: "Cloche Enterprise"
 base-image: quay.io/centos-bootc/centos-bootc
-image-version: latest
+image-version: stream10
 
 modules:
   - type: containerfile
