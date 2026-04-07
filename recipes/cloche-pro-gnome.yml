@@ -1,6 +1,6 @@
 name: cloche-pro-gnome
 description: "Cloche PRO (GNOME)"
-# Aqui está a herança: a base é o seu Server, não o CentOS puro.
+
 base-image: ghcr.io/augustofmarques/cloche-pro
 image-version: latest
 
@@ -18,17 +18,19 @@ modules:
 
   - type: files
     files:
-      - usr: /usr
-      - etc: /etc
+      - source: system/usr
+        destination: /usr
+      - source: system/etc
+        destination: /etc
 
-  # 2. Instala a interface gráfica
+
   - type: dnf
     install:
       packages:
         - "@Workstation"
         - gdm
 
-  # 3. Habilita o login gráfico
+
   - type: systemd
     system:
       enabled:
