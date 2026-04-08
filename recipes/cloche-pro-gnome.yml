@@ -6,10 +6,6 @@ image-version: latest
 
 modules:
 
-  - type: containerfile
-    snippets:
-      - RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
   - type: os-release
     properties:
       #ID: cloche-pro
@@ -34,6 +30,10 @@ modules:
         - "@Workstation"
         - gdm
 
+  - type: containerfile
+    snippets:
+      - RUN grubby --update-kernel=ALL --args="quiet splash rhgb"
+      - RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
   - type: systemd
     system:
