@@ -16,6 +16,10 @@ modules:
       SUPPORT_URL: https://github.com/augustofmarques/cloche
       DEFAULT_HOSTNAME: cloche
 
+  - type: containerfile
+    snippets:
+      - RUN dnf upgrade -y --allowerasing
+
   - type: files
     files:
       - source: system/usr
