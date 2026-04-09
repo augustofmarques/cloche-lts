@@ -36,16 +36,16 @@ modules:
         #- zsh
         - btop
         #- tailscale
-        - gnome-tweaks
-        - gnome-shell-extension-dash-to-panel
-        - gnome-shell-extension-blur-my-shell
-        - gnome-shell-extension-caffeine
+        #- gnome-tweaks
+        #- gnome-shell-extension-dash-to-panel
+        #- gnome-shell-extension-blur-my-shell
+        #- gnome-shell-extension-caffeine
         - fastfetch
         - plymouth-plugin-script
 
   - type: script
     snippets:
-      - "files/scripts/setup-cloche-pro-gnome.sh"
+      - "scripts/setup-cloche-pro-gnome.sh"
 
   - type: containerfile
     snippets:
