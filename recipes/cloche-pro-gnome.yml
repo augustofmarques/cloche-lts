@@ -29,11 +29,29 @@ modules:
       packages:
         - "@Workstation"
         - gdm
+        #
+        - cockpit
+        - git
+        - distrobox
+        #- zsh
+        - btop
+        #- tailscale
+        - gnome-tweaks
+        - gnome-shell-extension-dash-to-panel
+        - gnome-shell-extension-blur-my-shell
+        - gnome-shell-extension-caffeine
+        - fastfetch
+        - plymouth-plugin-script
+
+  - type: script
+    snippets:
+      - "files/scripts/setup-cloche-pro-gnome.sh"
 
   - type: containerfile
     snippets:
-      - RUN grubby --update-kernel=ALL --args="quiet splash rhgb"
-      - RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+      - RUN grubby --update-kernel=ALL --args="nowatchdog random.trust_cpu=on console=tty0 quiet splash rhgb rd.udev.log_priority=3 vt.global_cursor_default=0 systemd.show_status=auto"
+      - RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo #&& \
+            #flatpak install -y system flathub com.mattjakeman.ExtensionManager com.vscodium.codium org.gnome.Calculator org.gnome.TextEditor org.gnome.baobab org.gnome.Evince
 
   - type: systemd
     system:
