@@ -53,8 +53,8 @@ modules:
   - type: containerfile
     snippets:
       - RUN grubby --update-kernel=ALL --args="nowatchdog random.trust_cpu=on console=tty0 quiet splash rhgb rd.udev.log_priority=3 vt.global_cursor_default=0 systemd.show_status=auto"
-      - RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo #&& \
-            #flatpak install -y system flathub com.mattjakeman.ExtensionManager com.vscodium.codium org.gnome.Calculator org.gnome.TextEditor org.gnome.baobab org.gnome.Evince
+      - RUN mkdir -p /etc/flatpak/remotes.d && \
+            curl -L https://dl.flathub.org/repo/flathub.flatpakrepo -o /etc/flatpak/remotes.d/flathub.flatpakrepo
 
   - type: systemd
     system:
