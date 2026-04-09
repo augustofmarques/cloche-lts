@@ -47,8 +47,8 @@ modules:
         #- plymouth-plugin-script
 
   - type: script
-    snippets:
-      - "scripts/setup-cloche-pro-gnome.sh"
+    scripts:
+      - setup-cloche-pro-gnome.sh
 
   - type: containerfile
     snippets:
