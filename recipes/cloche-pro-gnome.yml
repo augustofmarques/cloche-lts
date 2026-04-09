@@ -18,7 +18,7 @@ modules:
 
   - type: containerfile
     snippets:
-      - RUN dnf upgrade -y --allowerasing
+      - RUN dnf install -y --allowerasing --nobest "@Workstation" gdm cockpit git distrobox btop gnome-tweaks gnome-shell-extension-dash-to-panel gnome-shell-extension-blur-my-shell gnome-shell-extension-caffeine plymouth-plugin-script && dnf clean all
 
   - type: files
     files:
@@ -28,23 +28,23 @@ modules:
         destination: /etc
 
 
-  - type: dnf
-    install:
-      packages:
-        - "@Workstation"
-        - gdm
+  #- type: dnf
+   # install:
+    #  packages:
+     #   - "@Workstation"
+      #  - gdm
         #
-        - cockpit
-        - git
-        - distrobox
+       # - cockpit
+        #- git
+        #- distrobox
         #- zsh
-        - btop
+        #- btop
         #- tailscale
-        - gnome-tweaks
-        - gnome-shell-extension-dash-to-panel
-        - gnome-shell-extension-blur-my-shell
-        - gnome-shell-extension-caffeine
-        - plymouth-plugin-script
+        #- gnome-tweaks
+        #- gnome-shell-extension-dash-to-panel
+        #- gnome-shell-extension-blur-my-shell
+        #- gnome-shell-extension-caffeine
+        #- plymouth-plugin-script
 
   - type: script
     snippets:
