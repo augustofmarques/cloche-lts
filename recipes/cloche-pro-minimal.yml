@@ -30,6 +30,7 @@ modules:
     install:
       packages:
         - fastfetch
+        - newt
 
   - type: containerfile
     snippets:
