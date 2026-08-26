@@ -31,6 +31,8 @@ modules:
       packages:
         - fastfetch
         - newt
+        - xorriso
+        - podman
 
   - type: containerfile
     snippets:
