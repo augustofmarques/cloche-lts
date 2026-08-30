@@ -15,6 +15,7 @@ modules:
         RUN dnf install -y --allowerasing --nobest \
           cargo && \
           dnf clean all
+      - RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
   - type: os-release
     properties:
@@ -33,6 +34,12 @@ modules:
         - newt
         - xorriso
         - podman
+        - zsh
+
+  - type: files
+    files:
+      - source: system/etc
+        destination: /etc
 
   - type: containerfile
     snippets:
