@@ -15,7 +15,7 @@ modules:
         RUN dnf install -y --allowerasing --nobest \
           cargo && \
           dnf clean all
-      - RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes
+      - RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir /usr/bin
 
   - type: os-release
     properties:
